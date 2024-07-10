@@ -1,0 +1,11 @@
+spring:
+    application:
+        name: solver
+    data:
+      mongodb:
+        host: db
+        database: shiftplanner_solver
+        username: ${DB_USERNAME}
+        password: ${DB_PASSWORD}
+timefold:
+  solver-config-xml: timefold/solverConfig.xml

@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    min-width: 20%;
+    width: 200px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 1rem 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #575757;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.new-teacher-button {
+    /* position: absolute;
+    top: 50%;
+    right: 2rem; */
+    transform: translateY(-50%);
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.new-teacher-button:hover {
+    background-color: #218838;
+}
+
+.teacher-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.teacher-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.teacher-card h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.teacher-card p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}

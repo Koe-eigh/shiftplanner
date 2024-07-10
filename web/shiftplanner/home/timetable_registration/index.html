@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shiftplanner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>メニュー</h2>
+        <ul>
+            <li><a href="../index.html">ホーム</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="elem_container">
+            <h2>講習会期間を選択</h2>
+            <div id="start_date">
+                <label for="start">開始：</label>
+                <input type="date" class="date" name="start" id="start">
+            </div>
+            <div id="end_date">
+                <label for="end">終了：</label>
+                <input type="date" class="date" name="end" id="end">
+            </div>
+            <div>
+                <label for="id">プロジェクト名：</label>
+                <input type="text" placeholder="プロジェクト名" id="id" name="id">
+            </div>
+            <div>
+                <button class="submit">登録</button>
+            </div>
+        </div>
+       
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
