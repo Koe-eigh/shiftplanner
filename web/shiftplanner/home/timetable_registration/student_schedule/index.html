@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>student schedule</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <aside class="sidebar">
+                <h2>メニュー</h2>
+                <nav>
+                    <ul>
+                        <li><a href="../../index.html">ホーム</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="content">
+                <header>
+                    <h2>生徒の講習会情報を入力してください</h2>
+                </header>
+                <section class="name-list">
+                    <label for="name">名前</label>
+                    <select name="name" id="name">
+
+                    </select>
+                </section>
+                <section class="calendar-wrap">
+                    <table id="calendar">
+
+                    </table>
+                </section>
+                <section class="lesson-info">
+                    <label for="subject">科目</label>
+                    <select name="subject" id="subject">
+                        <option value="算数">算数</option>
+                        <option value="国語">国語</option>
+
+                        <option value="中受算数">中受算数</option>
+                        <option value="中受国語">中受国語</option>
+                        <option value="中受社会">中受社会</option>
+                        <option value="中受理科">中受理科</option>
+
+                        <option value="中学数学">中学数学</option>
+                        <option value="中学英語">中学英語</option>
+                        <option value="中学国語">中学国語</option>
+                        <option value="中学理科">中学理科</option>
+                        <option value="中学社会">中学社会</option>
+
+                        <option value="高受数学">高受数学</option>
+                        <option value="高受英語">高受英語</option>
+                        <option value="高受国語">高受国語</option>
+                        <option value="高受理科">高受理科</option>
+                        <option value="高受社会">高受社会</option>
+
+                        <option value="高校英語">高校英語</option>
+                        <option value="数学IA">数学IA</option>
+                        <option value="数学IIB">数学IIB</option>
+                        <option value="数学III">数学III</option>
+                        <option value="現代文">現代文</option>
+                        <option value="古文">古文</option>
+
+                        <option value="大受英語">大受英語</option>
+                        <option value="大受数学IA">大受数学IA</option>
+                        <option value="大受数学IIB">大受数学IIB</option>
+                        <option value="大受数学III">大受数学III</option>
+                        <option value="大受現代文">大受現代文</option>
+                        <option value="大受古文">大受古文</option>
+                        <option value="大受日本史">大受日本史</option>
+                        <option value="大受世界史">大受世界史</option>
+                        <option value="大受化学">大受化学</option>
+                        <option value="大受物理">大受物理</option>
+                        <option value="大受生物">大受生物</option>
+                    </select>
+                    <select name="qty" id="qty">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                    </select>
+                    <button id="add">追加</button>
+                </section>
+                <section class="lesson-container">
+                    <ul class="course-list">
+                        <!-- <li class="course">数学 5</li> -->
+                    </ul>
+                </section>
+                <section class="student-list">
+                    <!-- <div class="student-card">
+                        <h2>山田 太郎</h2>
+                        <p>担当科目: 数学</p>
+                        <button class="delete-button">削除</button>
+                    </div> -->
+                </section>
+                <section class="buttons">
+                    <button id="submit">登録</button>
+                    <button onclick="location.href='../../timetable_home/index.html'">次へ</button>
+                </section>
+            </main>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background: #333;
+    color: white;
+    width: 250px;
+    padding: 1rem;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 1rem 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: #444;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+header {
+    padding: 70px 0px;
+    width: 100%;
+    background: #1E88E5;
+    text-align: center;
+    border-collapse: collapse;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+header ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.prev{
+    width: 2%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.prev:hover{
+    background-color: #0f76d1;
+}
+
+.next{
+    width: 2%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.next:hover{
+    background-color: #0f76d1;
+}
+
+.calendar-wrap{
+    background-color: white;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+#calendar{
+    border: 1px solid #cfcfcf;
+    margin: 5px auto;
+    padding: 0;
+    width: 100%;
+}
+
+.day{
+    background-color: rgb(98, 98, 255);
+    color: white;
+    width: 200px;
+}
+
+.date{
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.time{
+    background-color: #fae5c2;
+    text-align: center;
+    border: 1px solid rgb(219, 167, 115);
+    border-radius: 0.25rem;
+    height: 2.5rem;
+}
+
+
+
+.slot{
+    border: 1px solid rgb(217, 217, 217);
+    width: 7%;
+    height: 100%;
+}
+
+.slot1, .slot3, .slot5{
+    background-color: #f1f1f1;
+}
+
+.close{
+    background-color: #646464;
+}
+
+.dayOff{
+    background-color: #ff7b8d;
+}
+
+.lesson-container {
+    max-width: 100%;
+    max-height: 100%;
+}

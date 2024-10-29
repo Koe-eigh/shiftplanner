@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background: #333;
+    color: white;
+    width: 250px;
+    padding: 1rem;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 1rem 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: #444;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.name-list {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#calendar{
+    border: 1px solid #cfcfcf;
+    margin: 5px auto;
+    padding: 0;
+    width: 80%;
+}
+
+.day{
+    background-color: rgb(98, 98, 255);
+    color: white;
+}
+
+.date{
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.time{
+    background-color: #fae5c2;
+    text-align: center;
+    border: 1px solid rgb(219, 167, 115);
+    border-radius: 0.25rem;
+}
+
+.slot{
+    border: 1px solid rgb(217, 217, 217);
+}
+
+.slot1, .slot3, .slot5{
+    background-color: #f1f1f1;
+}
+
+.close{
+    background-color: #646464;
+}
+
+.selected{
+    background-color: #ff7b8d;
+}
+
+.calendar-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    background-color: white;
+}
+
+.teacher-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.teacher-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.teacher-card h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.teacher-card p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+.buttons {
+    text-align: center;
+}

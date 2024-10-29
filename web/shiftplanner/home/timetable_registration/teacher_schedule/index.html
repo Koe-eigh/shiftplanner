@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teacher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>メニュー</h2>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">ホーム</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header>
+                <h2>講師の休日希望日を入力してください</h2>
+            </header>
+            <section class="name-list">
+                <label for="name">名前</label>
+                <select name="name" id="name">
+
+                </select>
+            </section>
+            <section class="calendar-wrap">
+                <table id="calendar">
+
+                </table>
+            </section>
+            <section class="teacher-list">
+                <!-- <div class="teacher-card">
+                    <h2>山田 太郎</h2>
+                    <p>担当科目: 数学</p>
+                    <button class="delete-button">削除</button>
+                </div> -->
+            </section>
+            <section class="buttons">
+                <button id="add">追加</button>
+                <button id="next" onclick="location.href='../student_schedule/index.html'">次へ</button>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
