@@ -1,0 +1,7 @@
+.env
+.DS_STORE
+.vscode/
+.github/
+.devcontainer/
+docker-init-data-generator/
+docker-entrypoint-initdb.d/

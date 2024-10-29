@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver xmlns="https://timefold.ai/xsd/solver" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://timefold.ai/xsd/solver https://timefold.ai/xsd/solver/solver.xsd">
+    <solutionClass>com.shiftplanner.solver.domain.Timetable</solutionClass>
+    <entityClass>com.shiftplanner.solver.domain.Lesson</entityClass>
+    <scoreDirectorFactory>
+        <constraintProviderClass>com.shiftplanner.solver.constraints.ShiftplannerConstraintsProvider</constraintProviderClass>
+    </scoreDirectorFactory>
+    <termination>
+        <minutesSpentLimit>1</minutesSpentLimit>
+    </termination>
+    <constructionHeuristic>
+        <constructionHeuristicType>FIRST_FIT_DECREASING</constructionHeuristicType>
+    </constructionHeuristic>
+    <localSearch>
+        <termination>
+            <secondsSpentLimit>10</secondsSpentLimit>
+        </termination>
+        <localSearchType>HILL_CLIMBING</localSearchType>
+    </localSearch>
+    <localSearch>
+        <localSearchType>TABU_SEARCH</localSearchType>
+    </localSearch>
+</solver>
