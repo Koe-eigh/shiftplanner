@@ -1,0 +1,47 @@
+[
+    {
+        "_id": "d9b6e78b-1933-4939-a115-591f77152ce8",
+        "username": "admin",
+        "password": "$2a$10$sIPiCZMFF630lMyENi70aOb0oZcnQBN0AztEyhsvoJqI6t7VhUjLW",
+        "authorities": [
+            {
+                "_id": {
+                    "$numberLong": "0"
+                },
+                "authority": "ADMIN"
+            },
+            {
+                "_id": {
+                    "$numberLong": "1"
+                  },
+                "authority": "USER"
+            }
+        ]
+    },
+    {
+        "_id": "c99a1a67-bf6b-4d1a-9371-1d48a2458fbb",
+        "username": "Tom",
+        "password": "$2a$10$sIPiCZMFF630lMyENi70aOb0oZcnQBN0AztEyhsvoJqI6t7VhUjLW",
+        "authorities": [
+            {
+                "_id": {
+                    "$numberLong": "1"
+                  },
+                "authority": "USER"
+            }
+        ]
+    },
+    {
+        "_id": "8af6e3e1-c4cc-42f6-ad44-4a6d7a95f197",
+        "username": "Kevin",
+        "password": "$2a$10$sIPiCZMFF630lMyENi70aOb0oZcnQBN0AztEyhsvoJqI6t7VhUjLW",
+        "authorities": [
+            {
+                "_id": {
+                    "$numberLong": "1"
+                  },
+                "authority": "USER"
+            }
+        ]
+    }
+]
