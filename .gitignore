@@ -4,4 +4,3 @@
 .github/
 .devcontainer/
 docker-init-data-generator/
-docker-entrypoint-initdb.d/
