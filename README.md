@@ -8,5 +8,12 @@ cp .env.example .env
 ```
 
 ```bash
-docker compose up -d
+docker compose build
 ```
+
+```bash
+docker compose ups
+```
+
+ブラウザで http://localhost:3000/login にアクセスしてください。
+テストユーザーのusernameはTom、passwordはpasswordです。
