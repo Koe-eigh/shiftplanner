@@ -1,0 +1,14 @@
+[
+    {
+        "_id": {
+            "$numberLong": "0"
+        },
+        "authority": "ADMIN"
+    },
+    {
+        "_id": {
+            "$numberLong": "1"
+        },
+        "authority": "USER"
+    }
+]

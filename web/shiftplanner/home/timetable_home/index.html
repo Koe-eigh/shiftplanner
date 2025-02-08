@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>メニュー</h2>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">ホーム</a></li>
+                    <li><a href="../timetable_registration/teacher_schedule/index.html">講師情報入力</a></li>
+                    <li><a href="../timetable_registration/student_schedule/index.html">生徒情報入力</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header>
+                <button id="solve">solve</button>
+                <button id="switch">switch</button>
+                <ul>
+                    <li class="prev">&#10094;</li>
+                    <li class="next">&#10095;</li>
+                    <li class="name"></li>
+                </ul>
+                <button id="pdf">pdf</button>
+            </header>
+            <section class="calendar-wrap">
+                <table id="calendar"></table>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

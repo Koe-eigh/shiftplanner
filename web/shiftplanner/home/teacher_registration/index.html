@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>講師情報登録</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>メニュー</h2>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">ホーム</a></li>
+                    <li><a href="#">シフト管理</a></li>
+                    <li><a href="#">講師一覧</a></li>
+                    <li><a href="#">設定</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <div class="teacher-form">
+                <h1>講師情報登録</h1>
+                <section class="form-group">
+                    <label for="name">名前:</label>
+                <input type="text" id="name" name="name" required>
+                </section>
+                <section class="form-group">
+                    <label for="subjects">担当可能科目:</label>
+                <select id="subjects" name="subjects" multiple required>
+                    <option value="算数">算数</option>
+                    <option value="国語">国語</option>
+
+                    <option value="中受算数">中受算数</option>
+                    <option value="中受国語">中受国語</option>
+                    <option value="中受社会">中受社会</option>
+                    <option value="中受理科">中受理科</option>
+
+                    <option value="中学数学">中学数学</option>
+                    <option value="中学英語">中学英語</option>
+                    <option value="中学国語">中学国語</option>
+                    <option value="中学理科">中学理科</option>
+                    <option value="中学社会">中学社会</option>
+
+                    <option value="高受数学">高受数学</option>
+                    <option value="高受英語">高受英語</option>
+                    <option value="高受国語">高受国語</option>
+                    <option value="高受理科">高受理科</option>
+                    <option value="高受社会">高受社会</option>
+
+                    <option value="高校英語">高校英語</option>
+                    <option value="数学IA">数学IA</option>
+                    <option value="数学IIB">数学IIB</option>
+                    <option value="数学III">数学III</option>
+                    <option value="現代文">現代文</option>
+                    <option value="古文">古文</option>
+
+                    <option value="大受英語">大受英語</option>
+                    <option value="大受数学IA">大受数学IA</option>
+                    <option value="大受数学IIB">大受数学IIB</option>
+                    <option value="大受数学III">大受数学III</option>
+                    <option value="大受現代文">大受現代文</option>
+                    <option value="大受古文">大受古文</option>
+                    <option value="大受日本史">大受日本史</option>
+                    <option value="大受世界史">大受世界史</option>
+                    <option value="大受化学">大受化学</option>
+                    <option value="大受物理">大受物理</option>
+                    <option value="大受生物">大受生物</option>
+                </select>
+                </section>
+                <button type="submit" id="submit">登録</button>
+            </div>
+        </main>
+        <script src="app.js"></script>
+    </div>
+</body>
+</html>
