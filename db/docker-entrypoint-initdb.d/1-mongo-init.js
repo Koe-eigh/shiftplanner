@@ -3,7 +3,7 @@ let solver = {
     pwd: "password",
     roles: [
         {
-            role: "dbOwner",
+            role: "readWrite",
             db: "shiftplanner_solver"
         }
     ]
