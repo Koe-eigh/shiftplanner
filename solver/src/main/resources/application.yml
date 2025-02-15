@@ -7,5 +7,12 @@ spring:
         database: shiftplanner_solver
         username: ${DB_USERNAME}
         password: ${DB_PASSWORD}
+    devtools:
+      restart:
+        enabled: true
+      livereload:
+        enabled: true
+      remote:
+        secret: secret
 timefold:
   solver-config-xml: timefold/solverConfig.xml
