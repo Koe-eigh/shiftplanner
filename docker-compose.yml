@@ -1,18 +1,21 @@
 version: '3.9'
 services:
   solver:
+    image: maven:3.8.6-eclipse-temurin-17
     container_name: solver
-    build: ./solver
+    working_dir: /workspace
     ports:
       - 8080:8080
     tty: true
     volumes:
       - ./solver:/workspace:cached
+      - ~/.m2:/root/.m2
     environment:
       DB_USERNAME: ${DB_USERNAME}
       DB_PASSWORD: ${DB_PASSWORD}
     depends_on:
       - db
+    command: mvn spring-boot:run
   
   db:
     container_name: db
