@@ -1,6 +1,6 @@
 package com.shiftplanner.solver.core.scheduling.actions.timetables;
 
-public interface GetTimetableByIdInputPort {
+public interface GetTimetableByIdActionInputPort {
   String userId();
   Long timetableId();
 }
