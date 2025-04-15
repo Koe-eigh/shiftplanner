@@ -1,11 +1,8 @@
 package com.shiftplanner.solver.core.scheduling.repositories;
 
-import java.util.Optional;
-import java.util.UUID;
-
 import com.shiftplanner.solver.core.scheduling.entities.Timetable;
+import com.shiftplanner.solver.core.scheduling.values.TimetableId;
+import com.shiftplanner.solver.core.utils.repositories.IBaseRepository;
 
-public interface ITimetableRepository {
-  Optional<Timetable> findByTimetableId(UUID timetableId);
-  void save(Timetable timetable);
+public interface ITimetableRepository extends IBaseRepository<Timetable, TimetableId> {
 }

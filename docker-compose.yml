@@ -1,4 +1,3 @@
-version: '3.9'
 services:
   solver:
     image: maven:3.8.6-eclipse-temurin-17
@@ -11,26 +10,28 @@ services:
       - ./solver:/workspace:cached
       - ~/.m2:/root/.m2
     environment:
-      DB_USERNAME: ${DB_USERNAME}
-      DB_PASSWORD: ${DB_PASSWORD}
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/solver-db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+      SPRING_PROFILES_ACTIVE: ${ENVIRONMENT}
     depends_on:
       - db
     command: mvn spring-boot:run
   
   db:
-    container_name: db
-    image: mongo:8
+    image: mysql:8.0
+    container_name: mysql-db
     restart: always
     ports:
-      - 27017:27017
-    tty: true
-    volumes:
-      - ./db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - "3306:3306"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: ${DB_USERNAME}
-      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}
-      MONGO_INITDB_DATABASE: shiftplanner_solver
-      TZ: Asia/Tokyo
+      MYSQL_DATABASE: solver-db
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./database/init:/docker-entrypoint-initdb.d
 
   web:
     container_name: web
@@ -43,3 +44,6 @@ services:
     tty: true
     depends_on:
       - solver
+
+volumes:
+  mysql-data:

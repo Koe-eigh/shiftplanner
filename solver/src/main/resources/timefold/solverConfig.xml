@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <solver xmlns="https://timefold.ai/xsd/solver" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="https://timefold.ai/xsd/solver https://timefold.ai/xsd/solver/solver.xsd">
-    <solutionClass>com.shiftplanner.solver.domain.Timetable</solutionClass>
-    <entityClass>com.shiftplanner.solver.domain.Lesson</entityClass>
+    <solutionClass>com.shiftplanner.solver.core.scheduling.entities.Timetable</solutionClass>
+    <entityClass>com.shiftplanner.solver.core.scheduling.entities.Lesson</entityClass>
     <scoreDirectorFactory>
-        <constraintProviderClass>com.shiftplanner.solver.constraints.ShiftplannerConstraintsProvider</constraintProviderClass>
+        <constraintProviderClass>com.shiftplanner.solver.app.timefold.constraints.ShiftplannerConstraintsProvider</constraintProviderClass>
     </scoreDirectorFactory>
     <termination>
         <minutesSpentLimit>1</minutesSpentLimit>

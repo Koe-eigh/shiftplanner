@@ -1,18 +1,33 @@
 spring:
-    application:
-        name: solver
-    data:
-      mongodb:
-        host: db
-        database: shiftplanner_solver
-        username: ${DB_USERNAME}
-        password: ${DB_PASSWORD}
-    devtools:
-      restart:
-        enabled: true
-      livereload:
-        enabled: true
-      remote:
-        secret: secret
+  application:
+    name: solver
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE}
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    hikari:
+      initialization-fail-timeout: 10000
+      connection-timeout: 30000
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    # show-sql: true
+  sql:
+    init:
+      continue-on-error: true
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+    remote:
+      secret: secret
 timefold:
   solver-config-xml: timefold/solverConfig.xml

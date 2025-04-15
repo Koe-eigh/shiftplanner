@@ -4,11 +4,11 @@ import java.util.Objects;
 import java.util.Map;
 import java.util.Set;
 
-import com.shiftplanner.solver.core.scheduling.valueObjects.StudentId;
-import com.shiftplanner.solver.core.scheduling.valueObjects.StudentName;
-import com.shiftplanner.solver.core.scheduling.valueObjects.StudentGrade;
-import com.shiftplanner.solver.core.scheduling.valueObjects.Subject;
-import com.shiftplanner.solver.core.scheduling.valueObjects.Timeslot;
+import com.shiftplanner.solver.core.scheduling.values.StudentGrade;
+import com.shiftplanner.solver.core.scheduling.values.StudentId;
+import com.shiftplanner.solver.core.scheduling.values.StudentName;
+import com.shiftplanner.solver.core.scheduling.values.Subject;
+import com.shiftplanner.solver.core.scheduling.values.Timeslot;
 
 public class Student {
   private StudentId id;
@@ -82,7 +82,7 @@ public class Student {
   }
 
   public boolean isTaughtBy(Teacher teacher, Subject subject) {
-    return this.teachersInChargeMap.get(teacher).equals(subject);
+    return subject.equals(this.teachersInChargeMap.get(teacher));
   }
 
   public Subject getSubjectTaughtBy(Teacher teacher) {

@@ -10,13 +10,12 @@ import ai.timefold.solver.core.api.domain.variable.PlanningVariable;
 import com.shiftplanner.solver.app.timefold.comparators.LessonAssignmentDifficultyComparator;
 import com.shiftplanner.solver.app.timefold.comparators.TeacherStrengthComparator;
 import com.shiftplanner.solver.app.timefold.comparators.TimeslotStrengthComparator;
-import com.shiftplanner.solver.core.scheduling.valueObjects.Subject;
-import com.shiftplanner.solver.core.scheduling.valueObjects.Timeslot;
-import com.shiftplanner.solver.core.scheduling.valueObjects.LessonId;
+import com.shiftplanner.solver.core.scheduling.values.Subject;
+import com.shiftplanner.solver.core.scheduling.values.Timeslot;
 @PlanningEntity(difficultyComparatorClass = LessonAssignmentDifficultyComparator.class)
 public class Lesson {
   @PlanningId
-  private LessonId id;
+  private Long id;
 
   private Student student;
   private Subject subject;
@@ -33,7 +32,7 @@ public class Lesson {
   public Lesson() {
   }
 
-  public Lesson(LessonId id, Student student, Subject subject, Teacher teacher, Timeslot timeslot, boolean pinned) {
+  public Lesson(Long id, Student student, Subject subject, Teacher teacher, Timeslot timeslot, boolean pinned) {
     this.id = id;
     this.student = student;
     this.subject = subject;
@@ -42,7 +41,7 @@ public class Lesson {
     this.pinned = pinned;
   }
 
-  public LessonId getId() {
+  public Long getId() {
     return this.id;
   }
 
@@ -105,6 +104,6 @@ public class Lesson {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, student, subject, teacher, timeslot, pinned);
+    return Objects.hash(id);
   }
 }

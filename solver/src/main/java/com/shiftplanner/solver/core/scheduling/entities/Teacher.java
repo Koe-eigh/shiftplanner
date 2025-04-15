@@ -3,10 +3,10 @@ package com.shiftplanner.solver.core.scheduling.entities;
 import java.util.Objects;
 import java.util.Set;
 
-import com.shiftplanner.solver.core.scheduling.valueObjects.TeacherName;
-import com.shiftplanner.solver.core.scheduling.valueObjects.Timeslot;
-import com.shiftplanner.solver.core.scheduling.valueObjects.TeacherId;
-import com.shiftplanner.solver.core.scheduling.valueObjects.Subject;
+import com.shiftplanner.solver.core.scheduling.values.Subject;
+import com.shiftplanner.solver.core.scheduling.values.TeacherId;
+import com.shiftplanner.solver.core.scheduling.values.TeacherName;
+import com.shiftplanner.solver.core.scheduling.values.Timeslot;
 
 public class Teacher {
   private TeacherId id;

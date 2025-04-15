@@ -1,9 +1,11 @@
 package com.shiftplanner.solver.core.scheduling.entities;
 
 import java.util.List;
+import java.util.Objects;
 
-import com.shiftplanner.solver.core.scheduling.valueObjects.Timeslot;
-import com.shiftplanner.solver.core.scheduling.valueObjects.TimetableId;
+import com.shiftplanner.solver.core.scheduling.values.Timeslot;
+import com.shiftplanner.solver.core.scheduling.values.TimetableId;
+import com.shiftplanner.solver.core.scheduling.values.TimetableName;
 
 import ai.timefold.solver.core.api.domain.solution.PlanningEntityCollectionProperty;
 import ai.timefold.solver.core.api.domain.solution.PlanningSolution;
@@ -16,7 +18,7 @@ import ai.timefold.solver.core.api.solver.SolverStatus;
 @PlanningSolution
 public class Timetable {
   private TimetableId id;
-  private String name;
+  private TimetableName name;
 
   @PlanningEntityCollectionProperty
   private List<Lesson> lessons;
@@ -36,7 +38,11 @@ public class Timetable {
 
   public Timetable() {}
 
-  public Timetable(TimetableId id, String name, List<Lesson> lessons, List<Timeslot> timeslots, List<Teacher> teachers) {
+  public Timetable(TimetableName name) {
+    this.name = name;
+  }
+
+  public Timetable(TimetableId id, TimetableName name, List<Lesson> lessons, List<Timeslot> timeslots, List<Teacher> teachers) {
     this.id = id;
     this.name = name;
     this.lessons = lessons;
@@ -44,7 +50,7 @@ public class Timetable {
     this.teachers = teachers;
   }
 
-  public Timetable(TimetableId id, String name, List<Lesson> lessons, List<Timeslot> timeslots, List<Teacher> teachers, HardSoftScore score, SolverStatus solverStatus) {
+  public Timetable(TimetableId id, TimetableName name, List<Lesson> lessons, List<Timeslot> timeslots, List<Teacher> teachers, HardSoftScore score, SolverStatus solverStatus) {
     this.id = id;
     this.name = name;
     this.lessons = lessons;
@@ -58,7 +64,7 @@ public class Timetable {
     return id;
   }
 
-  public String getName() {
+  public TimetableName getName() {
     return name;
   }
 
@@ -100,5 +106,23 @@ public class Timetable {
 
   public void setSolverStatus(SolverStatus solverStatus) {
     this.solverStatus = solverStatus;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null || this.getClass() != obj.getClass()) return false;
+    Timetable other = (Timetable) obj;
+    return this.id.equals(other.id);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id);
+  }
+
+  @Override
+  public String toString() {
+    return "Timetabl: { id: " + this.id + ", name: " + this.name + " }";
   }
 }
