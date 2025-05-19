@@ -1,0 +1,5 @@
+  type: string
+  description: 講習会ID
+  minLength: 1
+  maxLength: 255
+  example: "1"

@@ -1,0 +1,9 @@
+openapi: 3.0.3
+info:
+  title: 講習会API
+  description: 講習会用APIドキュメント
+  version: 1.0.0
+
+paths:
+  /courses:
+    $ref: "./paths/index.yml"

@@ -1,0 +1,17 @@
+get:  
+  operationId: getCourses
+  summary: 講習会一覧取得
+  description: 講習会一覧を取得します。
+  tags:
+    - 講習会
+  responses:
+    "200":
+      description: 講習会一覧取得成功
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../components/schemas/models/CourseSummary.yml"
+    "204":
+      description: 講習会一覧取得成功(空)
