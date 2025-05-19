@@ -15,3 +15,29 @@ get:
               $ref: "../components/schemas/models/CourseSummary.yml"
     "204":
       description: 講習会一覧取得成功(空)
+
+post:
+  operationId: createCourse
+  summary: 講習会作成
+  description: 講習会を作成します。
+  tags:
+    - 講習会
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../components/schemas/requests/CreateCourseRequest.yml"
+  responses:
+    "201":
+      description: 講習会作成成功
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas/models/CourseSummary.yml"
+    "400":
+      description: 講習会作成失敗(不正なリクエスト)
+      content:
+        application/json:
+          schema:
+            $ref: "../../shared/components/schemas/responses/BadRequestResponse.yml"

@@ -1,0 +1,39 @@
+type: object
+properties:
+  name:
+    type: string
+    description: 講習会名
+    example: "2025-summar"
+    minLength: 1
+    maxLength: 255
+  startDate:
+    type: string
+    format: date-time
+    description: 開始日時
+    example: "2023-10-01T00:00:00Z"
+  endDate:
+    type: string
+    format: date-time
+    description: 終了日時
+    example: "2023-10-31T23:59:59Z"
+  teacherIds:
+    type: array
+    items:
+      type: string
+      description: 講習会参加講師ID
+      minLength: 1
+      maxLength: 255
+      example: "1"
+  studentIds:
+    type: array
+    items:
+      type: string
+      description: 講習会参加生徒ID
+      minLength: 1
+      maxLength: 255
+      example: "1"
+required:
+  - name
+  - startDate
+  - endDate
+  
