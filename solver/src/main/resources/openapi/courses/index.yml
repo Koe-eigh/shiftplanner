@@ -7,3 +7,5 @@ info:
 paths:
   /courses:
     $ref: "./paths/index.yml"
+  /courses/{courseId}:
+    $ref: "./paths/courseId.yml"

@@ -1,0 +1,33 @@
+get:
+  operationId: getCourse
+  parameters:
+    - name: courseId
+      in: path
+      required: true
+      description: 講習会ID
+      schema:
+        type: string
+      example: "1"
+  tags:
+    - 講習会
+  summary: 講習会情報取得
+  description: 講習会ページの概要画面に表示する講習会情報を取得します。
+  responses:
+    "200":
+      description: 成功
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas/responses/GetCourseResponse.yml"
+    "400":
+      description: 不正なリクエスト
+      content:
+        application/json:
+          schema:
+            $ref: "../../shared/components/schemas/responses/BadRequestResponse.yml"
+    "404":
+      description: 講習会が存在しない
+      content:
+        application/json:
+          schema:
+            $ref: "../../shared/components/schemas/responses/NotFoundResponse.yml"

@@ -1,0 +1,34 @@
+type: object
+properties:
+  id:
+    $ref: "../models/CourseId.yml"
+  name:
+    $ref: "../models/CourseName.yml"
+  startDate:
+    type: string
+    format: date-time
+    description: 開始日時
+    example: "2023-10-01T00:00:00Z"
+  endDate:
+    type: string
+    format: date-time
+    description: 終了日時
+    example: "2023-10-31T23:59:59Z"
+  teacherCount:
+    type: integer
+    description: 講師数
+    example: 5
+  studentCount:
+    type: integer
+    description: 生徒数
+    example: 100
+  assignedTeacherCount:
+    type: integer
+    description: 割り当て済み講師数
+    example: 2
+  assignedStudentCount:
+    type: integer
+    description: 割り当て済み生徒数
+    example: 50
+  status:
+    $ref: "../models/CourseStatus.yml"

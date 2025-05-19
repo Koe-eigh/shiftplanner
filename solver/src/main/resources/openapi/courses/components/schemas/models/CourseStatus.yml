@@ -1,0 +1,13 @@
+type: string
+description: |
+  講習会ステータス
+  - DRAFT: 下書き、未公開
+  - OPEN: シフト、申し込み受付中
+  - SCHEDULING: スケジュール調整中
+  - PUBLISHED: 公開済み
+enum:
+  - "DRAFT"
+  - "OPEN"
+  - "SCHEDULING"
+  - "PUBLISHED"
+example: "DRAFT"

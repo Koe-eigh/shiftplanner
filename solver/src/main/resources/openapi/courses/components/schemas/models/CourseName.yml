@@ -1,5 +1,5 @@
 type: string
-description: The name of the timetable.
+description: 講習会名
 example: "2025-summar"
 minLength: 1
 maxLength: 255
